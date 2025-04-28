@@ -2,7 +2,7 @@ import random
 
 class Agent():
     """The base agent class"""
-    def __init__(self, energy:int, p_reproduce:int, cell=None):
+    def __init__(self, energy:int, p_reproduce:int):
         """Initialize an agent.
         Args:
             energy: Starting amount of energy
@@ -11,7 +11,6 @@ class Agent():
         """
         self.energy = energy
         self.p_reproduce = p_reproduce
-        self.cell = cell
     
     def feed(self):
         pass
@@ -21,8 +20,7 @@ class Agent():
         self.energy /=2
         self.__class__(
             self.energy,
-            self.p_reproduce,
-            self.cell)
+            self.p_reproduce)
     def move(self):
         """Find a random neighboring cell and move there"""
         pass
@@ -43,7 +41,7 @@ class Agent():
 
 class Sheep(Agent):
     def move(self):
-
+        pass
 
 
 class Wolf(Agent):
